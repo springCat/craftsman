@@ -1,0 +1,8 @@
+.idea/
+craftsman-app/target/
+craftsman-client/target/
+craftsman-domain/target/
+*.iml
+craftsman-infrastructure/target/
+start/target/
+craftsman-controller/target/

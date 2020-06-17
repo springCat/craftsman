@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--数据源-->
+    <bean id="craftsman1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${spring.datasource.db.craftsman1.driver-class-name}" />
+        <property name="url" value="${spring.datasource.db.craftsman1.jdbcUrl}" />
+        <property name="username" value="${spring.datasource.db.craftsman1.username}" />
+        <property name="password" value="${spring.datasource.db.craftsman1.password}" />
+    </bean>
+
+    <!-- 驼峰映射 -->
+    <bean name="craftsman1Configuration" class="org.apache.ibatis.session.Configuration">
+        <property name="mapUnderscoreToCamelCase" value="true"/>
+    </bean>
+
+    <!-- 配置会话工厂bean -->
+    <bean id="craftsman1SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 数据源 -->
+        <property name="dataSource" ref="craftsman1" />
+        <!-- 给实体类取别名，这样配置可以只需要写类名，不需要带类完整路径，简化映射文件中的返回类型resultType书写(可能其他地方还有用到) -->
+        <property name="typeAliasesPackage" value="com.alibaba.craftsman.tunnel.database.craftsman1.dataobject" />
+        <property name="mapperLocations" value="classpath*:mybatis/craftsman1/*.xml"/>
+        <property name="configuration" ref="craftsman1Configuration"/>
+    </bean>
+
+    <!-- 事务管理器-->
+    <bean name="craftsman1DataSourceTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="craftsman1"/>
+    </bean>
+
+    <!-- 配置自动扫描对象关系映射文件 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 指定会话工厂，如配置中只有一个则可省去 -->
+        <property name="sqlSessionFactoryBeanName" value="craftsman1SqlSessionFactory" />
+        <!-- 指定要自动扫描的包，不带类名，表示扫描工程下所有在这一层下面的接口，所以为了方便，尽量把所有映射接口都放在同一包下 -->
+        <property name="basePackage" value="com.alibaba.craftsman.tunnel.database.craftsman1" />
+    </bean>
+
+</beans>
