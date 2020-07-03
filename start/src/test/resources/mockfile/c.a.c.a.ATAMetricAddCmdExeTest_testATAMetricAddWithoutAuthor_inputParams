@@ -1,0 +1,19 @@
+{"initialized":true,"version":"1.0.0"}
+com.alibaba.craftsman.service.MetricsServiceImpl_addATAMetric
+=================method_params_separator================
+[
+	[
+		{
+			"@type":"com.alibaba.craftsman.dto.ATAMetricAddCmd",
+			"ataMetricCO":{
+				"commentCount":0,
+				"extValues":{"@type":"java.util.HashMap"},
+				"favoriteCount":0,
+				"hitCount":0,
+				"thumbsUpCount":0
+			},
+			"needsOperator":false
+		}
+	]
+]
+=======================different_method_separator=============================

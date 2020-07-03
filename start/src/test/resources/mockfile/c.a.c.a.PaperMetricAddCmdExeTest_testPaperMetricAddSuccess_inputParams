@@ -1,0 +1,18 @@
+{"initialized":true,"version":"1.0.0"}
+com.alibaba.craftsman.tunnel.database.craftsman.MetricTunnel_create
+=================method_params_separator================
+[
+	[
+		{
+			"@type":"com.alibaba.craftsman.tunnel.database.craftsman.dataobject.MetricDO",
+			"creator":"xiaoming",
+			"id":"1088",
+			"mainMetric":"tech-influence",
+			"metricItem":"{\"magazine\":\"IEEE\",\"paperDesc\":\"paper Description\",\"paperLink\":\"http://www.alibaba.com\",\"paperName\":\"paperName\"}",
+			"modifier":"xiaoming",
+			"subMetric":"Paper",
+			"userId":"PaperMetricAddCmdExeTest_098872"
+		}
+	]
+]
+=======================different_method_separator=============================

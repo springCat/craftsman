@@ -22,23 +22,16 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @date 2019-03-01 6:18 PM
  */
 @RunWith(ColaTestRunner.class)
-@ColaMockConfig(mocks={MetricTunnel.class, MetricsServiceImpl.class})
+@ColaMockConfig(mocks={MetricTunnel.class})
 public class ATAMetricAddCmdExeTest extends MockTestBase {
 
     @Autowired
     private MetricsServiceI metricsServiceImpl;
 
-    private String userId;
-
-    @Before
-    public void init(){
-        userId = "ATAMetricAddCmdExeTest" + System.currentTimeMillis();
-    }
-
-    public static ATAMetricAddCmd prepareCommand(String userId){
+    public static ATAMetricAddCmd prepareCommand(){
         ATAMetricAddCmd ataMetricAddCmd = new ATAMetricAddCmd();
         ATAMetricCO ataMetricCO = new ATAMetricCO();
-        ataMetricCO.setOwnerId(userId);
+        ataMetricCO.setOwnerId("ATAMetricAddCmdExeTest");
         ataMetricCO.setTitle("testATAMetricAddSuccess");
         ataMetricCO.setUrl("sharingLink");
         ataMetricCO.setCommentCount(14);
@@ -52,7 +45,7 @@ public class ATAMetricAddCmdExeTest extends MockTestBase {
     @Test
     @ExcludeCompare(fields = {"id","userId"})
     public void testATAMetricAddSuccess(){
-        ATAMetricAddCmd ataMetricAddCmd = prepareCommand(userId);
+        ATAMetricAddCmd ataMetricAddCmd = prepareCommand();
         Response response = metricsServiceImpl.addATAMetric(ataMetricAddCmd);
         Assert.assertTrue(response.isSuccess());
     }

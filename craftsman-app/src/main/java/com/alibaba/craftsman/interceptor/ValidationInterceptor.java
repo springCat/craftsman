@@ -36,6 +36,7 @@ public class ValidationInterceptor extends AbstractValidationInterceptor impleme
         super.validate(command);
     }
 
+    @Override
     public void doValidation(Object target){
         Validator validator = factory.getValidator();
         Set<ConstraintViolation<Object>> constraintViolations = validator.validate(target);

@@ -30,7 +30,7 @@ public class ScoreRecalculateTest extends MockTestBase {
         UserProfileAddCmd userProfileAddCmd = UserProfileCmdExeTest.prepareCommand(userId, UserProfileCO.DEV_ROLE);
         userProfileServiceImpl.addUserProfile(userProfileAddCmd);
 
-        ATAMetricAddCmd ataMetricAddCmd = ATAMetricAddCmdExeTest.prepareCommand(userId);
+        ATAMetricAddCmd ataMetricAddCmd = ATAMetricAddCmdExeTest.prepareCommand();
         metricsServiceImpl.addATAMetric(ataMetricAddCmd);
         metricsServiceImpl.addATAMetric(ataMetricAddCmd);
         metricsServiceImpl.addATAMetric(ataMetricAddCmd);

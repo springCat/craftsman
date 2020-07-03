@@ -1,0 +1,74 @@
+{"initialized":true,"version":"1.0.0"}
+com.alibaba.craftsman.tunnel.database.craftsman.MetricTunnel_listByMainMetric
+---------------------------
+[
+	[],
+	[]
+]
+===========================
+com.alibaba.craftsman.tunnel.database.craftsman.UserProfileTunnel_create
+---------------------------
+[
+	1
+]
+===========================
+com.alibaba.craftsman.tunnel.database.craftsman.UserProfileTunnel_getByUserId
+---------------------------
+[
+	{
+		"@type":"com.alibaba.craftsman.tunnel.database.craftsman.dataobject.UserProfileDO",
+		"appQualityScore":0.0D,
+		"checkinCodeQuantity":0.0D,
+		"creator":"creator",
+		"dep":"ICBU",
+		"devQualityScore":0.0D,
+		"isManager":"y",
+		"modifier":"modifier",
+		"role":"DEV",
+		"techContributionScore":0.0D,
+		"techInfluenceScore":0.0D,
+		"totalScore":0.0D,
+		"userId":"UserProfileCmdExeTest1000",
+		"userName":"Frank"
+	},
+	{
+		"@type":"com.alibaba.craftsman.tunnel.database.craftsman.dataobject.UserProfileDO",
+		"appQualityScore":79.0D,
+		"checkinCodeQuantity":0.0D,
+		"creator":"creator",
+		"dep":"ICBU",
+		"devQualityScore":90.0D,
+		"isManager":"y",
+		"modifier":"modifier",
+		"role":"DEV",
+		"techContributionScore":0.0D,
+		"techInfluenceScore":0.0D,
+		"totalScore":33.8D,
+		"userId":"UserProfileCmdExeTest1000",
+		"userName":"Frank"
+	},
+	{
+		"@type":"com.alibaba.craftsman.tunnel.database.craftsman.dataobject.UserProfileDO",
+		"appQualityScore":79.0D,
+		"checkinCodeQuantity":0.0D,
+		"creator":"creator",
+		"dep":"ICBU",
+		"devQualityScore":90.0D,
+		"isManager":"y",
+		"modifier":"modifier",
+		"role":"QA",
+		"techContributionScore":100.0D,
+		"techInfluenceScore":200.0D,
+		"totalScore":33.8D,
+		"userId":"UserProfileCmdExeTest1000",
+		"userName":"Frank"
+	}
+]
+===========================
+com.alibaba.craftsman.tunnel.database.craftsman.UserProfileTunnel_update
+---------------------------
+[
+	1,
+	1
+]
+===========================

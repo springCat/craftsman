@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
  * @author Frank Zhang
  * @date 2019-03-01 11:41 AM
  */
-@Service
+@Service("metricsService")
 public class MetricsServiceImpl implements MetricsServiceI{
 
     @Autowired

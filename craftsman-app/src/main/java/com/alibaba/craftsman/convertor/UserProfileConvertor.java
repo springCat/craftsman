@@ -20,16 +20,22 @@ public class UserProfileConvertor implements ConvertorI {
         UserProfileDO userProfileDO = new UserProfileDO();
         BeanUtils.copyProperties(userProfile, userProfileDO);
         userProfileDO.setRole(userProfile.getRole().name());
+        userProfileDO.setCreator("creator");
+        userProfileDO.setModifier("modifier");
         return userProfileDO;
     }
 
     public static UserProfileDO toDataObjectForCreate(UserProfile userProfile){
         UserProfileDO userProfileDO = toDataObject(userProfile);
+        userProfileDO.setCreator("creator");
+        userProfileDO.setModifier("modifier");
         return userProfileDO;
     }
 
     public static UserProfileDO  toDataObjectForUpdate(UserProfile userProfile){
         UserProfileDO userProfileDO = toDataObject(userProfile);
+        userProfileDO.setCreator("creator");
+        userProfileDO.setModifier("modifier");
         return userProfileDO;
     }
 }

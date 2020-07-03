@@ -9,6 +9,7 @@ import com.alibaba.craftsman.domain.metrics.techinfluence.ATAMetricItem;
 import com.alibaba.craftsman.domain.metrics.techinfluence.InfluenceMetric;
 import com.alibaba.craftsman.domain.user.UserProfile;
 import com.alibaba.craftsman.dto.ATAMetricAddCmd;
+import org.apache.dubbo.rpc.RpcContext;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -26,10 +27,15 @@ public class ATAMetricAddCmdExe implements CommandExecutorI<Response, ATAMetricA
 
     @Override
     public Response execute(ATAMetricAddCmd cmd) {
+        String attachment = RpcContext.getContext().getAttachment("11");
+        System.out.println("attachment"+attachment);
+
         ATAMetricItem ataMetricItem = new ATAMetricItem();
         BeanUtils.copyProperties(cmd.getAtaMetricCO(), ataMetricItem);
+
         ataMetricItem.setSubMetric(new ATAMetric(new InfluenceMetric(new UserProfile(cmd.getAtaMetricCO().getOwnerId()))));
         metricRepository.save(ataMetricItem);
+
         return Response.buildSuccess();
     }
 }

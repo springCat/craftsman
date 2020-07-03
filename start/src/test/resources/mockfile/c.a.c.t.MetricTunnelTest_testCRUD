@@ -1,0 +1,34 @@
+{"initialized":true,"version":"1.0.0"}
+com.alibaba.craftsman.tunnel.database.craftsman.MetricTunnel_create
+---------------------------
+[
+	1
+]
+===========================
+com.alibaba.craftsman.tunnel.database.craftsman.MetricTunnel_delete
+---------------------------
+[
+	1
+]
+===========================
+com.alibaba.craftsman.tunnel.database.craftsman.MetricTunnel_listByUserId
+---------------------------
+[
+	[
+		{
+			"@type":"com.alibaba.craftsman.tunnel.database.craftsman.dataobject.MetricDO",
+			"creator":"Creator",
+			"gmtCreate":1592898062000,
+			"gmtModified":1592898062000,
+			"id":"1125",
+			"isDeleted":false,
+			"mainMetric":"tech-influence",
+			"metricItem":"{\"level\": \"PROJECT\", \"patentName\": \"Leads重构\"}",
+			"modifier":"Modifier",
+			"subMetric":"Refactoring",
+			"userId":"MetricTunnelTest"
+		}
+	],
+	[]
+]
+===========================

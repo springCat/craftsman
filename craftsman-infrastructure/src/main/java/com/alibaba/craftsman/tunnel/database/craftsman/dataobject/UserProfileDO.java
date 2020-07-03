@@ -66,4 +66,8 @@ public class UserProfileDO {
      */
     private double checkinCodeQuantity;
 
+    private String creator;
+
+    private String modifier;
+
 }

@@ -1,0 +1,12 @@
+{"initialized":true,"version":"1.0.0"}
+com.alibaba.craftsman.service.MetricsServiceImpl_addATAMetric
+---------------------------
+[
+	{
+		"@type":"com.alibaba.cola.dto.Response",
+		"errCode":"BIZ_ERROR",
+		"errMessage":"title must not be empty",
+		"success":false
+	}
+]
+===========================

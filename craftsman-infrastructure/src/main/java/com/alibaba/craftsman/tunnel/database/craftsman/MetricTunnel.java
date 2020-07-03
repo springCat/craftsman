@@ -1,4 +1,5 @@
 package com.alibaba.craftsman.tunnel.database.craftsman;
+import org.apache.ibatis.annotations.Param;
 
 import com.alibaba.craftsman.tunnel.database.craftsman.dataobject.MetricDO;
 import org.apache.ibatis.annotations.Mapper;
@@ -19,4 +20,9 @@ public interface MetricTunnel {
     int delete(String id,String modifier);
 
     MetricDO getById(String id);
+
+    List<MetricDO> findByUserId(@Param("userId")String userId);
+
+
+
 }

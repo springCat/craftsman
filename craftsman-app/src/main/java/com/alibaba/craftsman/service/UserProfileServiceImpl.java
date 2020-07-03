@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
  * @author Frank Zhang
  * @date 2019-02-28 6:22 PM
  */
-@Service
+@Service("userProfileService")
 public class UserProfileServiceImpl implements UserProfileServiceI{
     @Autowired
     private CommandBusI commandBus;

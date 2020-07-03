@@ -1,9 +1,11 @@
 package com.alibaba.craftsman;
 
+import cn.hutool.core.date.DateUtil;
 import com.alibaba.cola.logger.Logger;
 import com.alibaba.cola.logger.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  * Spring Boot Starter
@@ -12,7 +14,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author Frank Zhang
  */
+
 @SpringBootApplication(scanBasePackages = {"com.alibaba.craftsman","com.alibaba.cola"})
+@ImportResource(locations = "classpath:dubbo-provider.xml")
 public class Application {
 
     private static Logger logger = LoggerFactory.getLogger(Application.class);
@@ -22,6 +26,8 @@ public class Application {
         long startTime = System.currentTimeMillis();
 
         SpringApplication.run(Application.class, args);
+
+
 
         long endTime = System.currentTimeMillis();
         logger.info("End starting Spring Boot Application, Time used: "+ (endTime - startTime) );
