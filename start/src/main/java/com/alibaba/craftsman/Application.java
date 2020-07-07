@@ -27,8 +27,6 @@ public class Application {
 
         SpringApplication.run(Application.class, args);
 
-
-
         long endTime = System.currentTimeMillis();
         logger.info("End starting Spring Boot Application, Time used: "+ (endTime - startTime) );
     }

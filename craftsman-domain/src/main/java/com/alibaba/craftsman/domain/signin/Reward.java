@@ -9,16 +9,11 @@ import java.util.List;
  */
 public abstract class Reward {
 
-
     private List<RewardItem> rewardList;
-
 
     public void invoke(){
         for (RewardItem rewardItem : rewardList) {
             rewardItem.invoke();
         }
     }
-
-
-
 }

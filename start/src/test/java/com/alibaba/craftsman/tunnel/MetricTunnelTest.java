@@ -6,7 +6,6 @@ import com.alibaba.cola.mock.runner.ColaTestRunner;
 import com.alibaba.craftsman.app.MockTestBase;
 import com.alibaba.craftsman.domain.metrics.MainMetricType;
 import com.alibaba.craftsman.domain.metrics.SubMetricType;
-import com.alibaba.craftsman.service.MetricsServiceImpl;
 import com.alibaba.craftsman.tunnel.database.craftsman.MetricTunnel;
 import com.alibaba.craftsman.tunnel.database.craftsman.dataobject.MetricDO;
 import org.junit.Assert;
