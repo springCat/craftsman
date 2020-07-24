@@ -1,6 +1,7 @@
 package com.alibaba.craftsman.command.query;
 
 import com.alibaba.cola.command.CommandExecutorI;
+import com.alibaba.cola.command.QueryExecutorI;
 import com.alibaba.cola.command.Step;
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.Response;
@@ -21,7 +22,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 @Step
-public class ATAMetricQry2Exe implements CommandExecutorI<Response, ATAMetricQry> {
+public class ATAMetricQry2Exe implements QueryExecutorI<Response, ATAMetricQry> {
 
     @Autowired
     private MetricTunnel metricTunnel;

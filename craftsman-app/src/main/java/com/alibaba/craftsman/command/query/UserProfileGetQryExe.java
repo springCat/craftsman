@@ -2,6 +2,7 @@ package com.alibaba.craftsman.command.query;
 
 import com.alibaba.cola.command.Command;
 import com.alibaba.cola.command.CommandExecutorI;
+import com.alibaba.cola.command.QueryExecutorI;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
 import com.alibaba.craftsman.dto.UserProfileGetQry;
@@ -12,7 +13,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Command
-public class UserProfileGetQryExe implements CommandExecutorI<Response, UserProfileGetQry> {
+public class UserProfileGetQryExe implements QueryExecutorI<Response, UserProfileGetQry> {
 
     @Autowired
     private UserProfileTunnel userProfileTunnel;

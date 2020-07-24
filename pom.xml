@@ -21,7 +21,6 @@
 
     <modules>
         <module>craftsman-client</module>
-        <module>craftsman-controller</module>
         <module>craftsman-app</module>
         <module>craftsman-domain</module>
         <module>craftsman-infrastructure</module>

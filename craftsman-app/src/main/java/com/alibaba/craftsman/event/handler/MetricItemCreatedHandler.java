@@ -11,6 +11,7 @@ import com.alibaba.craftsman.dto.RefreshScoreCmd;
 import com.alibaba.craftsman.dto.domainevent.MetricItemCreatedEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
 import java.util.Collections;
 
 @EventHandler
@@ -18,7 +19,7 @@ public class MetricItemCreatedHandler implements EventHandlerI<Response, MetricI
 
     private Logger logger = LoggerFactory.getLogger(MetricItemCreatedHandler.class);
 
-    @Autowired
+    @Resource
     private UserProfileServiceI userProfileService;
 
     @Override

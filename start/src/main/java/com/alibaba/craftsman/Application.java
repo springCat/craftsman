@@ -1,6 +1,5 @@
 package com.alibaba.craftsman;
 
-import cn.hutool.core.date.DateUtil;
 import com.alibaba.cola.logger.Logger;
 import com.alibaba.cola.logger.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -16,7 +15,7 @@ import org.springframework.context.annotation.ImportResource;
  */
 
 @SpringBootApplication(scanBasePackages = {"com.alibaba.craftsman","com.alibaba.cola"})
-@ImportResource(locations = "classpath:dubbo-provider.xml")
+@ImportResource(locations = {"classpath:service-provider.xml","classpath:dubbo-provider.xml"})
 public class Application {
 
     private static Logger logger = LoggerFactory.getLogger(Application.class);

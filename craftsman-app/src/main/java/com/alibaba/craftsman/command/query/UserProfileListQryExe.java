@@ -2,6 +2,7 @@ package com.alibaba.craftsman.command.query;
 
 import com.alibaba.cola.command.Command;
 import com.alibaba.cola.command.CommandExecutorI;
+import com.alibaba.cola.command.QueryExecutorI;
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.craftsman.dto.UserProfileListQry;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Command
-public class UserProfileListQryExe implements CommandExecutorI<Response, UserProfileListQry> {
+public class UserProfileListQryExe implements QueryExecutorI<Response, UserProfileListQry> {
 
     @Autowired
     private UserProfileTunnel userProfileTunnel;

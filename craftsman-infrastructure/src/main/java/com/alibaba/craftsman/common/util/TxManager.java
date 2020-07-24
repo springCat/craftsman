@@ -1,7 +1,5 @@
 package com.alibaba.craftsman.common.util;
 
-import cn.hutool.extra.spring.SpringUtil;
-import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.TransactionDefinition;

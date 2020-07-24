@@ -1,9 +1,6 @@
 package com.alibaba.craftsman.controller;
 
-import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.ReflectUtil;
-import cn.hutool.json.JSON;
-import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.cola.common.ApplicationContextHelper;
 import com.alibaba.cola.dto.MultiResponse;
@@ -12,19 +9,17 @@ import com.alibaba.craftsman.api.MetricsServiceI;
 import com.alibaba.craftsman.dto.ATAMetricAddCmd;
 import com.alibaba.craftsman.dto.ATAMetricQry;
 import com.alibaba.craftsman.dto.clientobject.ATAMetricCO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import javax.annotation.Resource;
 import javax.validation.constraints.NotNull;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
-import java.util.HashMap;
-import java.util.Map;
+
 
 @RestController
 public class MetricsController {
 
-    @Autowired
+    @Resource
     private MetricsServiceI metricsService;
 
     @GetMapping(value = "/metrics/ata")

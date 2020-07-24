@@ -2,6 +2,7 @@ package com.alibaba.craftsman.command.query;
 
 import com.alibaba.cola.command.Command;
 import com.alibaba.cola.command.CommandExecutorI;
+import com.alibaba.cola.command.QueryExecutorI;
 import com.alibaba.cola.dto.MultiResponse;
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.extension.BizScenario;
@@ -12,7 +13,7 @@ import com.alibaba.craftsman.point.CountryPrinterExtPt;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Command
-public class ATAMetricQryExe implements CommandExecutorI<Response, ATAMetricQry> {
+public class ATAMetricQryExe implements QueryExecutorI<Response, ATAMetricQry> {
 
     @Autowired
     private ATAMetricQry1Exe aTAMetricQry1Exe;

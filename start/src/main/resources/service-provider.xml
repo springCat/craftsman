@@ -18,20 +18,16 @@
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
        xmlns="http://www.springframework.org/schema/beans"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
+    <bean id = "serviceInvoker" class="com.alibaba.craftsman.service.ServiceInvoker"/>
 
-    <dubbo:application metadata-type="remote" name="demo-provider"/>
+    <bean id = "metricsService" factory-bean="serviceInvoker" factory-method="getServiceInvoker" >
+        <constructor-arg value="com.alibaba.craftsman.api.MetricsServiceI"/>
+    </bean>
 
-    <dubbo:metadata-report address="zookeeper://127.0.0.1:2181"/>
-
-    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
-
-    <dubbo:protocol name="dubbo"/>
-
-    <dubbo:service interface="com.alibaba.craftsman.api.MetricsServiceI" ref="metricsService"/>
-
-
+    <bean id = "userProfileService" factory-bean="serviceInvoker" factory-method="getServiceInvoker">
+        <constructor-arg value="com.alibaba.craftsman.api.UserProfileServiceI"/>
+    </bean>
 
 </beans>
